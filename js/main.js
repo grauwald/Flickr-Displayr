@@ -3,7 +3,7 @@ function FlickrDisplayr() {
 	
 	var base_url =  "https://api.flickr.com/services/rest";
 	var method = "flickr.people.getPhotos";
-	var api_key = "df0277b8fff85c5ae122dc218d10e80e";
+	var api_key = "4da62db9e6167a25f10a62fa05cc9938"; 	// get your own key: https://www.flickr.com/services/apps/create/apply/
 	var user_id = "23730220%40N08";
 	var page = 0;
 	var totalPages;
