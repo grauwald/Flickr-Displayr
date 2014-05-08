@@ -49,6 +49,10 @@ function FlickrDisplayr() {
 			var $photo = $('<div class="photo" />'); // construct photo div
 			$photo.css('background-image', 'url('+URL+')'); // put image as background
 			
+			$photo.click(function(){
+				$(this).toggleClass('active');
+			});
+			
 			$wrapper.append($photo); // add to HTML display
 		}
 

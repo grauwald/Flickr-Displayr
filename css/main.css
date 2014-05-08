@@ -97,6 +97,13 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+* {
+    -moz-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
 
 
 html, body {
@@ -120,11 +127,13 @@ html, body {
 	width: 100%;
 	background-color: #FFF;
 	background-repeat: no-repeat;
-	background-size: 90% auto;
+	background-size: cover;
 	background-position: center center;
 }
 
-
+#wrapper .photo.active {
+	background-size: 90% auto;
+}
 
 
 
