@@ -114,15 +114,17 @@ html, body {
 }
 
 #wrapper {
-	position: relative;
+	position: absolute;
+	top: 0;
+	height: 0;
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
 	overflow-y: scroll;
+	background: white;
 }
 
 #wrapper .photo {
-	position: static;
 	display: inline-block;
 	height: 45%;
 	width: 20%;
@@ -134,13 +136,32 @@ html, body {
 
 
 #wrapper .photo.active {
-	background-size: 90% auto;
+	/*background-size: 90% auto;
+	width: 100%;
+	height: 100%;
+	*/
+	opacity: .5;
 }
 
 #wrapper .photoBig{
-
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 101;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	opacity: 0;
+	display: none;
 }
 
+#wrapper .photoBig.active{
+	display: block;
+	opacity: 1;
+}
 
 @media (max-width: 1024px) {
   #wrapper .photo{

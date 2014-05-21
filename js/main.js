@@ -52,15 +52,25 @@ function FlickrDisplayr() {
 			var $photoBig = $('<div class="photoBig" />'); // construct photo div
 			$photoBig.css('background-image', 'url('+URL+')'); // put image as background
 			
+			$photo.data('bigPhoto', $photoBig);
+			$photoBig.data('small', $photoBig);
+
 			$photo.click(photoClick);
+			$photoBig.click(photoClick);
+
 			
 			$wrapper.append($photo); // add to HTML display
+			$wrapper.append($photoBig); 
 		}
 
 	}
 	
 	var photoClick = function(){
-		$(this).toggleClass('active');
+		$photo = $(this);
+		$photo.toggleClass('active');
+		
+		$photoBig = $photo.data('bigPhoto');
+		$photoBig.toggleClass('active');
 	}
 	
 	
