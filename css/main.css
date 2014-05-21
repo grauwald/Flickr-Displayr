@@ -122,17 +122,36 @@ html, body {
 }
 
 #wrapper .photo {
-	position: relative;
-	height: 100%;
-	width: 100%;
+	position: static;
+	display: inline-block;
+	height: 45%;
+	width: 20%;
 	background-color: #FFF;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 }
 
+
 #wrapper .photo.active {
 	background-size: 90% auto;
+}
+
+#wrapper .photoBig{
+
+}
+
+
+@media (max-width: 1024px) {
+  #wrapper .photo{
+  	width: 50%;
+  }
+}
+
+@media (max-width: 640px) {
+  #wrapper .photo{
+  	width: 100%;
+  }
 }
 
 

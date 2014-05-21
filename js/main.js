@@ -49,14 +49,22 @@ function FlickrDisplayr() {
 			var $photo = $('<div class="photo" />'); // construct photo div
 			$photo.css('background-image', 'url('+URL+')'); // put image as background
 			
-			$photo.click(function(){
-				$(this).toggleClass('active');
-			});
+			var $photoBig = $('<div class="photoBig" />'); // construct photo div
+			$photoBig.css('background-image', 'url('+URL+')'); // put image as background
+			
+			$photo.click(photoClick);
 			
 			$wrapper.append($photo); // add to HTML display
 		}
 
 	}
+	
+	var photoClick = function(){
+		$(this).toggleClass('active');
+	}
+	
+	
+	
 
 	init();
 }
